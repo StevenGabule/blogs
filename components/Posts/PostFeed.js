@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
-import {getPostAll, getPostFeed} from "../../lib/api";
+import { getPostFeed} from "../../lib/api";
 import Card from "react-bootstrap/Card";
+import Post from "./Post";
 
-const Post = ({auth}) => {
+const PostFeed = ({auth}) => {
     const {user = null} = auth || null;
     const [posts, setPosts] = useState([]);
+
     useEffect(() => {
         getPosts();
     }, [])
@@ -14,19 +16,13 @@ const Post = ({auth}) => {
             getPostFeed(auth.user._id).then((posts) => setPosts(posts));
         }
     }
-
     return (
         <>
             {posts.length > 0 && posts.map((post, i) => (
-                <Card key={i}>
-                    <Card.Body>
-                        <Card.Title>{post.text}</Card.Title>
-                        <img src={post.image} alt="no image found"/>
-                    </Card.Body>
-                </Card>
+               <Post key={i} auth={auth} post={post} />
             ))}
         </>
     )
 }
 
-export default Post;
+export default PostFeed;

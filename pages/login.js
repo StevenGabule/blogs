@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import {authInitialProps, signInUser} from "../lib/auth";
-import Router from "next/router";
 
 const INITIAL_USER = {
     email: "",
@@ -14,7 +13,7 @@ const Login = ({auth}) => {
     const [error, setError] = useState("");
 
     useEffect( () => {
-    
+
     }, [])
 
     function handleChange(e) {
