@@ -1,12 +1,19 @@
 import React from "react";
-import {authInitialProps} from "../lib/auth";
+import { authInitialProps } from "../lib/auth";
+import Head from 'next/head'
 
-export default function Profile() {
+function Profile() {
     return (
         <div>
-            Profile
+            <Head>
+                <title>Profile</title>
+            </Head>
+            <div>
+                <h4>Profile Page</h4>
+            </div>
         </div>
     )
 }
 
 Profile.getInitialProps = authInitialProps();
+export default Profile;

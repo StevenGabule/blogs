@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {signUpUser} from "../lib/auth";
+import Head from "next/head";
 
 const INITIAL_USER = {
     name: "",
@@ -28,7 +29,10 @@ export default function Register() {
     }
 
     return (
-
+        <div>
+            <Head>
+                <title>Free Registration</title>
+            </Head>
         <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlFor="nameInput">Name:</label>
@@ -54,5 +58,6 @@ export default function Register() {
                 <button type="submit" className="btn btn-primary">Create</button>
             </div>
         </form>
+        </div>
     )
 }

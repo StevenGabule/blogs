@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {authInitialProps, signInUser} from "../lib/auth";
+import Head from 'next/head'
+
 
 const INITIAL_USER = {
     email: "",
@@ -34,6 +36,10 @@ const Login = ({auth}) => {
     }
 
     return (
+        <div>
+         <Head>
+            <title>Welcome Back - Login </title>
+        </Head>
         <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlFor="exampleInputEmail1">Email address</label>
@@ -51,6 +57,7 @@ const Login = ({auth}) => {
                 <button type="submit" className="btn btn-primary">Login</button>
             </div>
         </form>
+        </div>
     )
 }
 

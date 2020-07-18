@@ -1,14 +1,17 @@
 import React from "react";
 import {authInitialProps} from "../lib/auth";
 import PostFeed from "../components/Posts/PostFeed";
+import Head from 'next/head';
 
 function Index({auth}) {
 
     return (
-        <>
-            <h5>Index</h5>
+        <div>
+            <Head>
+                <title>Homepage</title>
+            </Head>
             <PostFeed auth={auth}/>
-        </>
+        </div>
 
     )
 }

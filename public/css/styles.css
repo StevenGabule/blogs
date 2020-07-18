@@ -2,6 +2,11 @@ body {
     background-color: #1c1e21;
 }
 
+.bg-custom {
+    background-color: #242526;
+    color: white;
+}
+
 .card {
     background-color: #242526;
     color: white;
@@ -38,4 +43,29 @@ span.post-title a {
 .border-bottom,
 .border-top{
     border: 1px solid rgb(36, 37, 38) ;
+}
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+label.btnUpload {
+    display: block;
+    width: auto;
+    padding: 10px 20px 10px 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-right: 15px;
+    text-align: center;
+    height: auto;
+    color: white;
+    border-radius: 25px;
+    margin-left: 7%;
+
+}
+label.btnUpload:hover {
+    background-color: #1c1e21;
+}
+*:focus {
+    outline: none !important;
 }
