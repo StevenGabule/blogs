@@ -1,7 +1,5 @@
 import {Card, Form, Button} from "react-bootstrap";
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faPhotoVideo} from "@fortawesome/free-solid-svg-icons";
 
 const NewPost = ({text, image, handleChange, handleAddPost, auth, isAddingPost}) => (
     <Card className={"mb-3 mx-auto"} style={{width: '600px', height: 'auto'}}>

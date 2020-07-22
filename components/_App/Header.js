@@ -71,7 +71,7 @@ const Header = ({user}) => {
                                         }}>{user.name}</span>
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <Link href={'/profile'}>
+                                    <Link href={`/profile/${user._id}`}>
                                         <a className={'dropdown-item'}>Profile</a>
                                     </Link>
                                     <a className="dropdown-item" onClick={signOutUser} href="#">Logout</a>
