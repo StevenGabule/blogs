@@ -35,7 +35,7 @@
     "react": "16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "16.13.1",
-    "validator": "^13.1.1"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "compression": "^1.7.4"
